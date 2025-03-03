@@ -1,0 +1,11 @@
+version: '3'
+services:
+  my-container:
+    image: yaswanth-container  # Replace with your image name
+    deploy:
+      replicas: 2  # Deploy two replicas
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "8080:80"
+
